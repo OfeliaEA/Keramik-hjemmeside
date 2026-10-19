@@ -1,0 +1,189 @@
+/* ********************* GÆLDER FOR ALLE SIDER *************************** */
+
+body {
+  background-color: #e5edf3;
+}
+
+h1 {
+  color: #2b3cac;
+  font-size: 2.5rem;
+  font-family: "Fredoka", sans-serif;
+  text-align: center;
+  margin-top: 1.5rem;
+
+  @media (width > 800px) {
+font-size: 5rem;
+} 
+}
+
+
+h2 {
+  color: #510418;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+
+}
+
+p {
+  color: #510418;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.5rem;
+
+
+}
+
+h3 {
+  color: #510418;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+li {
+ font-family: "Nunito Sans", sans-serif; 
+ color: #510418;
+margin-inline: 2rem;
+ 
+
+}
+/* ************************** MENU ***************************** */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #FFD4EB;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+nav {
+  /* Desktop */
+  display: flex;
+  align-items: center;
+
+  /* Mobilsite */
+  @media (width < 800px) {
+    &.active .menu {
+      display: block;
+      background-color: #ffffff;
+      position: absolute;
+      top: 94px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    &.active .menu li {
+      margin: 10px 20px;
+    }
+
+    &.active .menu a {
+      font-size: 24px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-right: 20px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+    :hover {
+      color: #ff0000;
+    }
+  }
+  @media (width < 800px) {
+    display: none;
+  }
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  @media (width < 800px) {
+    display: block;
+    background-color: transparent;
+    border: 0;
+
+    &.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    &.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    &.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+  }
+}
+
+
+
+/* ***************** FORSIDE ******************** */
+
+.h1_forside {
+  font-size: 3rem;
+  margin-top: -0.6rem;
+
+  @media (width > 800px) {
+    font-size: 5rem;
+  }
+}
+p {
+  margin: 0 1rem;
+  line-height: 1.5rem;
+}
+
+a span {
+  background-color: pink;
+}
+
+/* *********************** Footer ************************** */
+
+footer { 
+  background-color:#FFD4EB;
+}
+
+
+
+
